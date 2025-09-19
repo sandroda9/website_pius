@@ -1,0 +1,77 @@
+/* Body & Hintergrund */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../img/Lendi_Praezisionsmechanik_7.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff; /* Schriftfarbe weiss */
+}
+
+/* Navbar */
+.top-navbar {
+    background-color: #000;
+}
+.top-navbar .nav-link {
+    color: #fff;
+}
+.top-navbar .nav-link:hover {
+    color: #ccc;
+}
+
+/* Volle Breite Boxen */
+.full-width-box {
+    width: 100%;
+    padding: 60px 0;
+    background-color: rgba(0,0,0,0.7);
+    margin-bottom: 20px; /* Abstand zwischen den Boxen */
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-box.full-width-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+/* Produkte */
+.products-section {
+    padding: 60px 0;
+}
+.product-box {
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+.product-box img {
+    border-radius: 5px;
+}
+.products-section.full-width-box {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Über mich */
+#about.full-width-box {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
