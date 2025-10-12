@@ -1,3 +1,7 @@
+/* =====================================
+   Global Styles
+===================================== */
+
 /* Body & Hintergrund */
 body {
     margin: 0;
@@ -5,35 +9,65 @@ body {
     font-family: Arial, sans-serif;
     background: url('../img/Lendi_Praezisionsmechanik_7.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
+    color: #fff; /* Schriftfarbe weiss */
 }
 
-/* Navbar */
+/* =====================================
+   Navbar
+===================================== */
 .top-navbar {
     background-color: #000;
+    transition: all 0.3s ease;
+    padding: 15px 20px;
 }
+
+.top-navbar.shrink {
+    padding: 5px 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.top-navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.top-navbar .navbar-brand img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
 .top-navbar .nav-link {
     color: #fff;
+    transition: color 0.3s ease;
 }
+
 .top-navbar .nav-link:hover {
     color: #ccc;
 }
 
-/* Volle Breite Boxen */
+/* =====================================
+   Volle Breite Boxen
+===================================== */
 .full-width-box {
     width: 100%;
     padding: 60px 0;
-    background-color: rgba(0,0,0,0.7);
-    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px; /* Abstand zwischen den Boxen */
 }
 
-/* Hero Section */
+/* =====================================
+   Hero Section
+===================================== */
 .hero-section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .hero-box.full-width-box {
     height: 100%;
     display: flex;
@@ -44,36 +78,98 @@ body {
     padding: 0 2rem;
 }
 
-/* Produkte */
+/* =====================================
+   Produkte
+===================================== */
 .products-section {
     padding: 60px 0;
 }
+
 .product-box {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     border-radius: 10px;
     color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
 .product-box img {
     border-radius: 5px;
 }
 
-/* Über mich */
+.products-section.full-width-box {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* =====================================
+   Neue Section: Graphitteil
+===================================== */
+#graphitteil {
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+}
+
+#graphitteil img {
+    border: 2px solid #555;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#graphitteil img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+#graphitteil h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#graphitteil p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* =====================================
+   Über mich
+===================================== */
 #about.full-width-box {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
-/* Kontakt */
-#contact.full-width-box {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-/* Footer */
+/* =====================================
+   Footer
+===================================== */
 .footer {
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* =====================================
+   Buttons / CTA (optional)
+===================================== */
+.cta-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
