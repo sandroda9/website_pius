@@ -1,16 +1,14 @@
 /* =====================================
    Global Styles
 ===================================== */
-
-/* Body & Hintergrund */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background: url('../img/Lendi_Praezisionsmechanik_7.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff; /* Schriftfarbe weiss */
-    margin-top: 80px; /* Platz, damit Navbar nichts überlappt */
+    color: #fff;
+    margin-top: 80px; /* Platz für fixierte Navbar */
 }
 
 html {
@@ -21,7 +19,7 @@ html {
    Navbar
 ===================================== */
 .top-navbar {
-    position: fixed; /* fixiert Navbar beim Scrollen */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -58,9 +56,8 @@ html {
     color: #ccc;
 }
 
-/* Hamburger Menü-Button (mobil) */
 .navbar-toggler {
-    margin-left: auto; /* Button ganz nach rechts */
+    margin-left: auto;
     border-color: #fff;
 }
 
@@ -80,7 +77,7 @@ html {
     width: 100%;
     padding: 60px 0;
     background-color: rgba(0, 0, 0, 0.7);
-    margin-bottom: 20px; /* Abstand zwischen den Boxen */
+    margin-bottom: 20px;
 }
 
 /* =====================================
@@ -101,6 +98,25 @@ html {
     align-items: center;
     text-align: center;
     padding: 0 2rem;
+}
+
+/* CTA-Button */
+.cta-btn {
+    background-color: #000; /* schwarz */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 /* =====================================
@@ -125,11 +141,6 @@ html {
 
 .product-box img {
     border-radius: 5px;
-}
-
-.products-section.full-width-box {
-    padding-top: 60px;
-    padding-bottom: 60px;
 }
 
 /* =====================================
@@ -194,24 +205,6 @@ html {
 }
 
 /* =====================================
-   Buttons / CTA (optional)
-===================================== */
-.cta-btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.cta-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-/* =====================================
    Responsives Verhalten
 ===================================== */
 @media (max-width: 992px) {
@@ -238,18 +231,8 @@ html {
     .top-navbar .navbar-brand img {
         height: 40px;
     }
-   /* --- Navbar Hintergrund im mobilen Zustand anpassen --- */
 
-/* Standard: schwarzer Hintergrund bleibt nur bei grösseren Bildschirmen */
-.top-navbar {
-    background-color: #000;
+    .top-navbar {
+        background-color: #000;
+    }
 }
-
-
-
-}
-
-
-
-
-
