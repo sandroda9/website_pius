@@ -1,6 +1,5 @@
-/* =====================================
-   Global Styles
-===================================== */
+/* ===================================== Global Styles ===================================== */
+/* Body & Hintergrund */
 body {
     margin: 0;
     padding: 0;
@@ -8,16 +7,14 @@ body {
     background: url('../img/Lendi_Praezisionsmechanik_7.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
-    margin-top: 80px; /* Platz für fixierte Navbar */
+    margin-top: 80px;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* =====================================
-   Navbar
-===================================== */
+/* ===================================== Navbar ===================================== */
 .top-navbar {
     position: fixed;
     top: 0;
@@ -70,9 +67,7 @@ html {
     display: none;
 }
 
-/* =====================================
-   Volle Breite Boxen
-===================================== */
+/* ===================================== Volle Breite Boxen ===================================== */
 .full-width-box {
     width: 100%;
     padding: 60px 0;
@@ -80,9 +75,7 @@ html {
     margin-bottom: 20px;
 }
 
-/* =====================================
-   Hero Section
-===================================== */
+/* ===================================== Hero Section ===================================== */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -100,28 +93,7 @@ html {
     padding: 0 2rem;
 }
 
-/* CTA-Button */
-.cta-btn {
-    background-color: #000; /* schwarz */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.cta-btn:hover {
-    background-color: #333;
-    color: #fff;
-    transform: scale(1.05);
-}
-
-/* =====================================
-   Produkte
-===================================== */
+/* ===================================== Produkte ===================================== */
 .products-section {
     padding: 60px 0;
 }
@@ -143,9 +115,7 @@ html {
     border-radius: 5px;
 }
 
-/* =====================================
-   Graphitteil
-===================================== */
+/* ===================================== Graphitteil ===================================== */
 #graphitteil {
     background: rgba(0, 0, 0, 0.75);
     color: #fff;
@@ -173,17 +143,13 @@ html {
     margin-bottom: 15px;
 }
 
-/* =====================================
-   Über mich
-===================================== */
+/* ===================================== Über mich ===================================== */
 #about.full-width-box {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
-/* =====================================
-   Kontakt
-===================================== */
+/* ===================================== Kontakt ===================================== */
 #contact a {
     text-decoration: underline;
     color: #fff;
@@ -193,9 +159,7 @@ html {
     color: #ccc;
 }
 
-/* =====================================
-   Footer
-===================================== */
+/* ===================================== Footer ===================================== */
 .footer {
     background-color: #000;
     color: #fff;
@@ -204,15 +168,31 @@ html {
     font-size: 0.9rem;
 }
 
-/* =====================================
-   Responsives Verhalten
-===================================== */
+/* ===================================== Buttons / CTA ===================================== */
+.cta-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ===================================== Responsives Verhalten ===================================== */
 @media (max-width: 992px) {
     .navbar-collapse {
         background-color: rgba(0, 0, 0, 0.95);
         padding: 1rem;
     }
-
     .navbar-nav .nav-link {
         text-align: center;
         padding: 10px 0;
@@ -223,16 +203,10 @@ html {
     body {
         margin-top: 70px;
     }
-
     .top-navbar .navbar-brand span {
         font-size: 1rem;
     }
-
     .top-navbar .navbar-brand img {
         height: 40px;
-    }
-
-    .top-navbar {
-        background-color: #000;
     }
 }
