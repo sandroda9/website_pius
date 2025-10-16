@@ -10,7 +10,9 @@ body {
     background: url('../img/Lendi_Praezisionsmechanik_7.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff; /* Schriftfarbe weiss */
+    margin-top: 80px; /* Platz, damit Navbar nichts überlappt */
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -19,7 +21,7 @@ html {
    Navbar
 ===================================== */
 .top-navbar {
-    position: fixed;
+    position: fixed; /* fixiert Navbar beim Scrollen */
     top: 0;
     left: 0;
     width: 100%;
@@ -28,7 +30,6 @@ html {
     transition: all 0.3s ease;
     padding: 15px 20px;
 }
-
 
 .top-navbar.shrink {
     padding: 5px 20px;
@@ -55,6 +56,16 @@ html {
 
 .top-navbar .nav-link:hover {
     color: #ccc;
+}
+
+/* Hamburger Menü-Button (mobil) */
+.navbar-toggler {
+    margin-left: auto; /* Button ganz nach rechts */
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* =====================================
@@ -155,6 +166,18 @@ html {
 }
 
 /* =====================================
+   Kontakt
+===================================== */
+#contact a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+#contact a:hover {
+    color: #ccc;
+}
+
+/* =====================================
    Footer
 ===================================== */
 .footer {
@@ -183,8 +206,31 @@ html {
     transform: scale(1.05);
 }
 
+/* =====================================
+   Responsives Verhalten
+===================================== */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+    }
 
+    .navbar-nav .nav-link {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
 
+@media (max-width: 576px) {
+    body {
+        margin-top: 70px;
+    }
 
+    .top-navbar .navbar-brand span {
+        font-size: 1rem;
+    }
 
-
+    .top-navbar .navbar-brand img {
+        height: 40px;
+    }
+}
