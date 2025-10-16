@@ -128,7 +128,7 @@ html {
 }
 
 /* =====================================
-   Neue Section: Graphitteil
+   Graphitteil
 ===================================== */
 #graphitteil {
     background: rgba(0, 0, 0, 0.75);
@@ -163,14 +163,6 @@ html {
 #about.full-width-box {
     padding-top: 60px;
     padding-bottom: 60px;
-}
-
-/* --- Einheitlicher Rahmen für Bilder im Abschnitt "Über mich" --- */
-.about-section img {
-    border: 4px solid #ddd; /* gleich wie Graphit-Rahmen */
-    border-radius: 15px;    /* leicht abgerundet */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* sanfter Schatten */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* =====================================
@@ -242,4 +234,5 @@ html {
         height: 40px;
     }
 }
+
 
