@@ -36,15 +36,9 @@ function loadAnalytics() {
 }
 
 window.addEventListener('load', function() {
-  const consent = localStorage.getItem('cookie_consent');
-  const banner = document.getElementById('cookie-banner');
-  if (!banner) return;
 
-  if (consent === 'accepted') {
     loadAnalytics();         // GA sofort laden
-    banner.style.display = 'none';
-  } else if (consent === 'declined') {
-    banner.style.display = 'none';
+ 
   }
 
   const acceptBtn = document.getElementById('accept-cookies');
@@ -65,3 +59,4 @@ window.addEventListener('load', function() {
     });
   }
 });
+
