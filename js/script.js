@@ -29,6 +29,7 @@ function loadAnalytics() {
   gtagScript.onload = function() {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', 'G-3P55CB7ZWP');
   };
@@ -40,7 +41,7 @@ window.addEventListener('load', function() {
   if (!banner) return;
 
   if (consent === 'accepted') {
-    loadAnalytics();
+    loadAnalytics();         // GA sofort laden
     banner.style.display = 'none';
   } else if (consent === 'declined') {
     banner.style.display = 'none';
@@ -52,7 +53,7 @@ window.addEventListener('load', function() {
   if (acceptBtn) {
     acceptBtn.addEventListener('click', function() {
       localStorage.setItem('cookie_consent', 'accepted');
-      loadAnalytics();
+      loadAnalytics();       // GA nur nach Zustimmung
       banner.style.display = 'none';
     });
   }
