@@ -19,8 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// --- DSGVO-konformer Cookie-Banner mit GA ---
+// --- DSGVO-konformer Cookie-Banner mit GA (immer laden) ---
 function loadAnalytics() {
+  if (window.gtagLoaded) return; // Verhindert doppeltes Laden
+  window.gtagLoaded = true;
+
   const gtagScript = document.createElement('script');
   gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-3P55CB7ZWP";
   gtagScript.async = true;
@@ -36,9 +39,18 @@ function loadAnalytics() {
 }
 
 window.addEventListener('load', function() {
+  // Analytics sofort laden, immer
+  loadAnalytics();
 
-    loadAnalytics();         // GA sofort laden
- 
+  // Cookie-Banner Logik bleibt erhalten
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+
+  const consent = localStorage.getItem('cookie_consent');
+  if (consent === 'accepted' || consent === 'declined') {
+    banner.style.display = 'none';
+  } else {
+    banner.style.display = 'block';
   }
 
   const acceptBtn = document.getElementById('accept-cookies');
@@ -47,7 +59,6 @@ window.addEventListener('load', function() {
   if (acceptBtn) {
     acceptBtn.addEventListener('click', function() {
       localStorage.setItem('cookie_consent', 'accepted');
-      loadAnalytics();       // GA nur nach Zustimmung
       banner.style.display = 'none';
     });
   }
@@ -59,4 +70,3 @@ window.addEventListener('load', function() {
     });
   }
 });
-
