@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// --- DSGVO-konformer Cookie-Banner mit GA ---
+// --- DSGVO-konformer Cookie-Banner mit Google Analytics ---
 function loadAnalytics() {
   const gtagScript = document.createElement('script');
   gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-3P55CB7ZWP";
@@ -40,20 +40,28 @@ window.addEventListener('load', function() {
   const banner = document.getElementById('cookie-banner');
   if (!banner) return;
 
+  // Wenn bereits Zustimmung erteilt wurde
   if (consent === 'accepted') {
-    loadAnalytics();         // GA sofort laden
+    loadAnalytics();
     banner.style.display = 'none';
-  } else if (consent === 'declined') {
+  } 
+  // Wenn abgelehnt wurde
+  else if (consent === 'declined') {
     banner.style.display = 'none';
+  } 
+  // Wenn keine Entscheidung getroffen wurde → Banner anzeigen
+  else {
+    banner.style.display = 'block';
   }
 
+  // Buttons verknüpfen
   const acceptBtn = document.getElementById('accept-cookies');
   const declineBtn = document.getElementById('decline-cookies');
 
   if (acceptBtn) {
     acceptBtn.addEventListener('click', function() {
       localStorage.setItem('cookie_consent', 'accepted');
-      loadAnalytics();       // GA nur nach Zustimmung
+      loadAnalytics();
       banner.style.display = 'none';
     });
   }
