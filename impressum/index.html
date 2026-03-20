@@ -24,7 +24,10 @@
 
   <!-- Inline CSS im Stil der Hauptseite -->
   <style>
-    /* ===================================== Global Styles ===================================== */
+    /* ===================================== Global ===================================== */
+    html, body {
+      height: 100%; /* wichtig für flexibles Layout */
+    }
     body {
       margin: 0;
       padding: 0;
@@ -33,16 +36,10 @@
       background-size: cover;
       color: #fff;
       margin-top: 80px; /* Platz für fixe Navbar */
+      display: flex;            /* Flex-Layout für Sticky-Footer-Effekt */
+      flex-direction: column;   /* Header (fix), Content, Footer */
     }
-    html {
-      scroll-behavior: smooth;
-    }
-
-    
-    html, body {
-    height: 90%;
-    }
-
+    html { scroll-behavior: smooth; }
 
     /* ===================================== Navbar ===================================== */
     .top-navbar {
@@ -53,55 +50,33 @@
       transition: all 0.3s ease;
       padding: 15px 20px;
     }
-    .top-navbar.shrink {
-      padding: 5px 20px;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-    .top-navbar .navbar-brand {
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: #fff;
-      text-decoration: none;
-    }
-    .top-navbar .navbar-brand img {
-      height: 50px;
-      margin-right: 10px;
-      border-radius: 5px;
-    }
-    .top-navbar .navbar-brand span {
-      display: none; /* Text neben Logo ausblenden (wie Hauptseite) */
-    }
-    .top-navbar .nav-link {
-      color: #fff;
-      transition: color 0.3s ease;
-    }
+    .top-navbar.shrink { padding: 5px 20px; background-color: rgba(0, 0, 0, 0.9); }
+    .top-navbar .navbar-brand { font-weight: bold; font-size: 1.2rem; color: #fff; text-decoration: none; }
+    .top-navbar .navbar-brand img { height: 50px; margin-right: 10px; border-radius: 5px; }
+    .top-navbar .navbar-brand span { display: none; }
+    .top-navbar .nav-link { color: #fff; transition: color 0.3s ease; }
     .top-navbar .nav-link:hover { color: #ccc; }
     .navbar-toggler { margin-left: auto; border-color: #fff; }
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
 
-    /* ===================================== Full-Width Boxen ===================================== */
+    /* ===================================== Sektionen / Boxen ===================================== */
     .full-width-box {
       width: 100%;
-      height: 80%;
-      padding: 40px 0; /* kompakter als Hero der Startseite */
+      padding: 40px 0;
       background-color: rgba(0, 0, 0, 0.7);
-    
+      /* KEIN height mehr! Sonst wird der Footer nach unten gedrückt */
+      /* margin-bottom NICHT nötig, da Footer ohnehin unten sitzt */
     }
 
-    /* ===================================== Impressum Titelbereich (nicht zentriert) ===================================== */
-    
+    /* Impressum: oberer Bereich (Container soll den verbleibenden Platz füllen) */
     .page-hero--compact {
-    min-height: calc(100vh - 80px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* kein Zentrieren */
+      flex: 1 0 auto;        /* füllt den verfügbaren Platz zwischen Navbar und Footer */
+      display: block;        /* kein zentriertes Flex nötig */
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
-    .page-hero--compact .container {
-      /* Standard Block-Layout: keine Zentrierung */
-    }
     .breadcrumb a { color: #fff; text-decoration: underline; }
     .breadcrumb .separator { opacity: .6; padding: 0 .4rem; }
 
@@ -113,6 +88,7 @@
       padding: 1.25rem;
       box-shadow: 0 0 15px rgba(255,255,255,0.05);
     }
+    .meta-list { margin: 0; }
     .meta-list dt { font-weight: 600; }
     .meta-list dd { margin-bottom: .5rem; }
 
@@ -120,7 +96,7 @@
     a.text-link { color: #fff; text-decoration: underline; }
     a.text-link:hover { color: #ccc; }
 
-    /* ===================================== CTA Button (falls genutzt) ===================================== */
+    /* ===================================== CTA Button ===================================== */
     .cta-btn {
       background-color: #000;
       color: #fff;
@@ -136,18 +112,15 @@
 
     /* ===================================== Footer ===================================== */
     footer {
-    margin-top: auto;
+      margin-top: auto;  /* schiebt den Footer an das Seitenende */
+      background-color: #111;
     }
-
     footer a { color: #fff; text-decoration: underline; }
     footer a:hover { color: #ccc; }
 
     /* ===================================== Responsive ===================================== */
     @media (max-width: 992px) {
-      .navbar-collapse {
-        background-color: rgba(0, 0, 0, 0.95);
-        padding: 1rem;
-      }
+      .navbar-collapse { background-color: rgba(0, 0, 0, 0.95); padding: 1rem; }
       .navbar-nav .nav-link { text-align: center; padding: 10px 0; }
     }
     @media (max-width: 576px) {
@@ -202,7 +175,7 @@
     </div>
   </nav>
 
-  <!-- Titel + Anbieterkennzeichnung im selben Container (nicht zentriert) -->
+  <!-- Titel + Anbieterkennzeichnung (füllt flexibel den Platz zwischen Navbar und Footer) -->
   <section class="full-width-box page-hero--compact">
     <div class="container">
       <nav class="breadcrumb mb-3" aria-label="breadcrumb">
@@ -246,10 +219,6 @@
           <dt>EHRA‑ID</dt>
           <dd>1553785</dd>
 
-           <p class="mt-4">
-              <a class="cta-btn" href="../">Zurück zur Startseite</a>
-            </p>
-
           <!-- Optional: sobald vorhanden auskommentieren und anpassen
           <dt>MWST‑Nr.</dt>
           <dd>CHE-XXX.XXX.XXX MWST</dd>
@@ -259,7 +228,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (bleibt am Seitenende, ohne fixiert zu sein) -->
   <footer class="text-center py-4 bg-dark text-light">
     <div class="container">
       <p>
