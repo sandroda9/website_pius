@@ -1,0 +1,15 @@
+{
+  "name": "HTML-CSS-JS Workspace",
+  "image": "mcr.microsoft.com/devcontainers/base:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.live-server",
+        "esbenp.prettier-vscode",
+        "ritwickdey.liveserver",
+        "dbaeumer.vscode-eslint",
+        "github.copilot"
+      ]
+    }
+  }
+}
