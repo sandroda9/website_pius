@@ -2,23 +2,145 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Impressum – Lendi Präzisionsmechanik GmbH</title>
 
   <!-- Canonical & Robots -->
   <link rel="canonical" href="https://www.lendi-praezisionsmechanik.ch/Impressum" />
   <meta name="robots" content="noindex, follow" />
 
-  <!-- Open Graph (minimal) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Impressum – Lendi Präzisionsmechanik GmbH" />
+  <meta property="og:description" content="Impressum gemäss schweizerischem UWG und EU‑E‑Commerce‑Richtlinien." />
   <meta property="og:url" content="https://www.lendi-praezisionsmechanik.ch/Impressum" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://www.lendi-praezisionsmechanik.ch/img/Lendi_Praezisionsmechanik_Logo.jpeg" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+  <!-- Inline CSS im Stil der Hauptseite -->
+  <style>
+    /* ===================================== Global Styles ===================================== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('../img/Lendi_Praezisionsmechanik_7.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin-top: 80px; /* Platz für fixe Navbar */
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ===================================== Navbar ===================================== */
+    .top-navbar {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      z-index: 1000;
+      background-color: #000;
+      transition: all 0.3s ease;
+      padding: 15px 20px;
+    }
+    .top-navbar.shrink {
+      padding: 5px 20px;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    .top-navbar .navbar-brand {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    .top-navbar .navbar-brand img {
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+    .top-navbar .navbar-brand span {
+      display: none; /* Text neben Logo ausblenden (wie Hauptseite) */
+    }
+    .top-navbar .nav-link {
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    .top-navbar .nav-link:hover { color: #ccc; }
+    .navbar-toggler { margin-left: auto; border-color: #fff; }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    /* ===================================== Full-Width Boxen ===================================== */
+    .full-width-box {
+      width: 100%;
+      padding: 40px 0; /* kompakter als Hero der Startseite */
+      background-color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+    }
+
+    /* ===================================== Impressum Titelbereich (nicht zentriert) ===================================== */
+    .page-hero--compact {
+      padding-top: 40px;
+      padding-bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .page-hero--compact .container {
+      /* Standard Block-Layout: keine Zentrierung */
+    }
+    .breadcrumb a { color: #fff; text-decoration: underline; }
+    .breadcrumb .separator { opacity: .6; padding: 0 .4rem; }
+
+    /* ===================================== Karten/Boxen ===================================== */
+    .card-impressum {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: 0 0 15px rgba(255,255,255,0.05);
+    }
+    .meta-list dt { font-weight: 600; }
+    .meta-list dd { margin-bottom: .5rem; }
+
+    /* ===================================== Links im Content ===================================== */
+    a.text-link { color: #fff; text-decoration: underline; }
+    a.text-link:hover { color: #ccc; }
+
+    /* ===================================== CTA Button (falls genutzt) ===================================== */
+    .cta-btn {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-btn:hover { background-color: #333; color: #fff; transform: scale(1.05); }
+
+    /* ===================================== Footer ===================================== */
+    footer a { color: #fff; text-decoration: underline; }
+    footer a:hover { color: #ccc; }
+
+    /* ===================================== Responsive ===================================== */
+    @media (max-width: 992px) {
+      .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+      }
+      .navbar-nav .nav-link { text-align: center; padding: 10px 0; }
+    }
+    @media (max-width: 576px) {
+      body { margin-top: 70px; }
+      .top-navbar .navbar-brand img { height: 40px; }
+    }
+  </style>
 
   <!-- Strukturierte Daten -->
   <script type="application/ld+json">
@@ -38,157 +160,130 @@
     "email":"info@lendipraezisionsmechanik.ch",
     "url":"https://www.lendi-praezisionsmechanik.ch",
     "founder":"Pius Lendi",
-    "priceRange":"$$$",
     "legalName":"Lendi Präzisionsmechanik GmbH"
   }
   </script>
-
-  <style>
-    /* Kleine, seitenbezogene Ergänzungen im Stil deiner Seite */
-    .page-hero {
-      min-height: 40vh;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center;
-    }
-    .meta-list dt { font-weight: 600; }
-    .meta-list dd { margin-bottom: .5rem; }
-    .card-impressum {
-      background-color: rgba(0,0,0,0.7);
-      color:#fff;
-      border-radius: 10px;
-      padding: 1.5rem;
-    }
-    .breadcrumb a { color: #fff; text-decoration: underline; }
-    .breadcrumb .separator { opacity:.6; padding: 0 .4rem; }
-  </style>
 </head>
 <body>
 
-<!-- Navbar (wie Hauptseite) -->
-<nav class="navbar navbar-expand-lg top-navbar" id="navbar">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center text-white" href="/">
-      <img src="../img/Lendi_Praezisionsmechanik_Logo.jpeg" alt="Logo Lendi Präzisionsmechanik">
-      <span>Lendi Präzisionsmechanik</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/#hero">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/#products">Produkte</a></li>
-        <li class="nav-item"><a class="nav-link" href="/#graphitteil">Graphit</a></li>
-        <li class="nav-item"><a class="nav-link" href="/#about">Über mich</a></li>
-        <li class="nav-item"><a class="nav-link" href="/#contact">Kontakt</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg top-navbar" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center text-white" href="../#hero">
+        <img src="../img/Lendi_Praezisionsmechanik_Logo.jpeg" alt="Logo Lendi Präzisionsmechanik">
+        <span>Lendi Präzisionsmechanik</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#products">Produkte</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#graphitteil">Graphit</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#about">Über mich</a></li>
+          <li class="nav-item"><a class="nav-link" href="../#contact">Kontakt</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Hero / Titel -->
-<section class="hero-section page-hero full-width-box">
-  <div class="container">
-    <div class="breadcrumb mb-3">
-      <a href="/">Start</a><span class="separator">/</span><span>Impressum</span>
+  <!-- Titel + Anbieterkennzeichnung im selben Container (nicht zentriert) -->
+  <section class="full-width-box page-hero--compact">
+    <div class="container">
+      <nav class="breadcrumb mb-3" aria-label="breadcrumb">
+        <a href="../" class="text-link">Start</a>
+        <span class="separator">/</span>
+        <span>Impressum</span>
+      </nav>
+
+      <h1 class="mb-3">Impressum</h1>
+
+      <!-- Anbieterkennzeichnung direkt unter dem Titel -->
+      <div class="card-impressum mb-0">
+        <h2 class="h4 mb-3">Anbieterkennzeichnung</h2>
+        <dl class="meta-list">
+          <dt>Firma</dt>
+          <dd>Lendi Präzisionsmechanik GmbH</dd>
+
+          <dt>Rechtsform</dt>
+          <dd>Gesellschaft mit beschränkter Haftung (GmbH)</dd>
+
+          <dt>Sitz</dt>
+          <dd>Quarten</dd>
+
+          <dt>Adresse</dt>
+          <dd>Rosshöchistrasse 1, 8877 Murg, Schweiz</dd>
+
+          <dt>Vertretungsberechtigt</dt>
+          <dd>Pius Lendi</dd>
+
+          <dt>E‑Mail</dt>
+          <dd><a class="text-link" href="mailto:info@lendipraezisionsmechanik.ch">info@lendipraezisionsmechanik.ch</a></dd>
+
+          <dt>Telefon</dt>
+          <dd><a class="text-link" href="tel:+41817382157">+41 81 738 21 57</a></dd>
+
+          <dt>UID</dt>
+          <dd>CHE-148.836.167</dd>
+
+          <dt>CH‑ID</dt>
+          <dd>CH-320-4095219-1</dd>
+
+          <dt>EHRA‑ID</dt>
+          <dd>1553785</dd>
+
+          <!-- Optional: sobald vorhanden auskommentieren und anpassen
+          <dt>MWST‑Nr.</dt>
+          <dd>CHE-XXX.XXX.XXX MWST</dd>
+          -->
+        </dl>
+      </div>
     </div>
-    <h1>Impressum</h1>
-    <p class="lead">Angaben gemäss schweizerischem UWG und EU‑E‑Commerce‑Richtlinien.</p>
-  </div>
-</section>
+  </section>
 
-<!-- Impressum Inhalt -->
-<section class="full-width-box">
-  <div class="container">
-    <div class="row justify-content-center g-4">
-      <div class="col-lg-8">
-        <div class="card-impressum">
-          <h2 class="mb-3">Anbieterkennzeichnung</h2>
+  <!-- Weitere rechtliche Hinweise -->
+  <section class="full-width-box">
+    <div class="container">
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-8">
+          <div class="card-impressum">
+            <h3 class="mb-3">Haftungsausschluss</h3>
+            <p>
+              Die Inhalte dieser Website werden mit grösstmöglicher Sorgfalt erstellt. Dennoch kann keine Gewähr
+              für die Richtigkeit, Vollständigkeit und Aktualität übernommen werden. Änderungen bleiben vorbehalten.
+            </p>
 
-          <dl class="meta-list">
-            <dt>Firma</dt>
-            <dd>Lendi Präzisionsmechanik GmbH</dd>
+            <h3 class="mt-4 mb-3">Urheberrechte</h3>
+            <p>
+              Sämtliche Inhalte (insbesondere Texte, Bilder, Logos und Layout) sind urheberrechtlich geschützt.
+              Jede Verwendung ausserhalb der gesetzlichen Schranken bedarf der vorherigen schriftlichen Zustimmung
+              der Lendi Präzisionsmechanik GmbH.
+            </p>
 
-            <dt>Rechtsform</dt>
-            <dd>Gesellschaft mit beschränkter Haftung (GmbH)</dd>
-
-            <dt>Sitz</dt>
-            <dd>Quarten</dd>
-
-            <dt>Adresse</dt>
-            <dd>Rosshöchistrasse 1, 8877 Murg, Schweiz</dd>
-
-            <dt>Vertretungsberechtigt</dt>
-            <dd>Pius Lendi</dd>
-
-            <dt>E‑Mail</dt>
-            <dd><a href="mailto:info@lendipraezisionsmechanik.ch" class="text-white">info@lendipraezisionsmechanik.ch</a></dd>
-
-            <dt>Telefon</dt>
-            <dd><a href="tel:+41817382157" class="text-white">+41 81 738 21 57</a></dd>
-
-            <dt>UID</dt>
-            <dd>CHE-148.836.167</dd>
-
-            <dt>CH‑ID</dt>
-            <dd>CH-320-4095219-1</dd>
-
-            <dt>EHRA‑ID</dt>
-            <dd>1553785</dd>
-
-            <!-- Optional, falls vorhanden: -->
-            <!--
-            <dt>MWST‑Nr.</dt>
-            <dd>CHE-XXX.XXX.XXX MWST</dd>
-            -->
-          </dl>
-
-          <hr class="my-4" />
-
-          <h3>Haftungsausschluss</h3>
-          <p>
-            Die Inhalte dieser Website werden mit grösstmöglicher Sorgfalt erstellt. Dennoch kann keine Gewähr
-            für die Richtigkeit, Vollständigkeit und Aktualität übernommen werden. Wir behalten uns
-            vor, Inhalte jederzeit anzupassen oder zu entfernen.
-          </p>
-
-          <h3>Urheberrechte</h3>
-          <p>
-            Sämtliche Inhalte (insbesondere Texte, Bilder, Logos und Layout) sind urheberrechtlich geschützt.
-            Jede Verwendung ausserhalb der gesetzlichen Schranken bedarf der vorherigen schriftlichen Zustimmung
-            der Lendi Präzisionsmechanik GmbH.
-          </p>
-
-          <h3>Kontakt</h3>
-          <p>
-            Für rechtliche Anfragen wenden Sie sich bitte an
-            <a href="mailto:info@lendipraezisionsmechanik.ch" class="text-white">info@lendipraezisionsmechanik.ch</a>.
-          </p>
-
-          <div class="mt-4">
-            <a href="/" class="cta-btn">Zurück zur Startseite</a>
+            <p class="mt-4">
+              <a class="cta-btn" href="../">Zurück zur Startseite</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="text-center py-4 bg-dark text-light">
-  <div class="container">
-    <p>
-      <a href="/Impressum" class="text-light">Impressum</a> |
-      <a href="/docs/Datenschutz_Lendi_Praezisionsmechanik.pdf" target="_blank" class="text-light">Datenschutz</a> |
-      <a href="/docs/AGB_Lendi_Praezisionsmechanik.pdf" target="_blank" class="text-light">AGB</a>
-    </p>
-    <p class="mb-0">© Lendi Präzisionsmechanik</p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-light">
+    <div class="container">
+      <p>
+        <a href="/Impressum" class="text-link">Impressum</a> |
+        <a href="/docs/Datenschutz_Lendi_Praezisionsmechanik.pdf" target="_blank" class="text-link">Datenschutz</a> |
+        <a href="/docs/AGB_Lendi_Praezisionsmechanik.pdf" target="_blank" class="text-link">AGB</a>
+      </p>
+      <p class="mb-0">© Lendi Präzisionsmechanik</p>
+    </div>
+  </footer>
 
-<!-- JS -->
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/script.js"></script>
-
+  <!-- Bootstrap JS Bundle + eigenes Script -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
