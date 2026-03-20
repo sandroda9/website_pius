@@ -38,6 +38,12 @@
       scroll-behavior: smooth;
     }
 
+    
+    html, body {
+    height: 100%;
+    }
+
+
     /* ===================================== Navbar ===================================== */
     .top-navbar {
       position: fixed;
@@ -84,11 +90,14 @@
     }
 
     /* ===================================== Impressum Titelbereich (nicht zentriert) ===================================== */
+    
     .page-hero--compact {
-      padding-top: 40px;
-      padding-bottom: 20px;
-      background-color: rgba(0, 0, 0, 0.7);
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* kein Zentrieren */
     }
+
     .page-hero--compact .container {
       /* Standard Block-Layout: keine Zentrierung */
     }
@@ -125,6 +134,10 @@
     .cta-btn:hover { background-color: #333; color: #fff; transform: scale(1.05); }
 
     /* ===================================== Footer ===================================== */
+    footer {
+    margin-top: auto;
+    }
+    
     footer a { color: #fff; text-decoration: underline; }
     footer a:hover { color: #ccc; }
 
